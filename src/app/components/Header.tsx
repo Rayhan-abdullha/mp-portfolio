@@ -15,7 +15,7 @@ const Header = () => {
   const menuItems = [
     { name: 'হোম', href: '/' },
     { name: 'পরিচয়', href: '/about' },
-    { name: 'গ্যালারি', href: '/gallery' },
+    { name: 'অভিযোগ দেখুন', href: '/complaints' },
     { name: 'উন্নয়ন', href: '/projects' },
   ];
 

@@ -6,13 +6,10 @@ import {
    ShieldAlert, Construction, Bell, Globe, ExternalLink,
 } from 'lucide-react';
 import Image from 'next/image';
-import ReportProblem from './Report';
-import ReportModal from './ReportModal';
 import { useUI } from '../context/UIContext';
 
 export default function MPPortal() {
   const {
-    reportModalOpen,
     setReportModalOpen,
   } = useUI();
 
@@ -27,11 +24,6 @@ export default function MPPortal() {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
   };
 
-  const itemVars = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } }
-  };
-
   return (
     <div className="min-h-screen bg-[#011612] text-slate-200 font-sans selection:bg-gold-500/30 overflow-x-hidden">
       
@@ -41,10 +33,6 @@ export default function MPPortal() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600/10 blur-[120px] rounded-full" />
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       </div>
-
-      {/* --- ২. ফ্লোটিং গ্লাস হেডার --- */}
-
-
       <main className="relative z-10 max-w-7xl mx-auto pt-8 px-4 md:px-12">
         
         {/* --- ৩. হিরো সেকশন: আল্ট্রা প্রিমিয়াম --- */}
@@ -56,7 +44,7 @@ export default function MPPortal() {
             </div>
             <h2 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic">
               সেবার তরে <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">নিবেদিত প্রাণ।</span>
+              <span className="text-transparent pr-5 bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">নিবেদিত প্রাণ</span>
             </h2>
             <p className="text-emerald-100/60 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
               মাননীয় প্রধানমন্ত্রী তারেক রহমান হাত ধরে স্মার্ট বাংলাদেশ বিনির্মাণে আমাদের এলাকার উন্নয়ন অব্যাহত রাখতে আমি প্রতিশ্রুতিবদ্ধ।
@@ -166,7 +154,6 @@ export default function MPPortal() {
           </div>
         </div>
       </main>
-      <ReportModal showReport={reportModalOpen} setShowReport={setReportModalOpen}/>
     </div>
   );
 }

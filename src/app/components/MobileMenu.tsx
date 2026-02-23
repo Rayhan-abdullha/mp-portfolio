@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
-import { Home, User, Image as ImageIcon, Megaphone, Building, Link } from 'lucide-react';
+import { Home, User, Image as ImageIcon, Megaphone, Building } from 'lucide-react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useUI } from '../context/UIContext';
 function MobileMenu() {
@@ -9,9 +10,9 @@ function MobileMenu() {
           <nav className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-20 bg-emerald-950/80 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] flex items-center justify-around px-6 z-50 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
         {[
           { id: 'home', icon: <Home size={22} />, label: 'হোম', link: '/' },
-          { id: 'gallery', icon: <ImageIcon size={22} />, label: 'গ্যালারি', link: '/gallery' },
+          { id: 'complaints', icon: <Megaphone size={22} />, label: 'অভিযোগ দেখুন', link: '/complaints' },
           { id: 'projects', icon: <Building size={22} />, label: 'উন্নয়ন', link: '/projects' },
-          { id: 'profile', icon: <User size={22} />, label: 'পরিচয়', link: '/about' },
+          { id: 'profile', icon: <User size={22} />, label: 'পরিচয়', link: '/about' },
         ].map((tab) => (
           <Link href={tab.link} 
             key={tab.id} onClick={() => setActiveTab(tab.id)}
