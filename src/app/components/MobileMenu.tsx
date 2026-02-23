@@ -7,10 +7,12 @@ import { useUI } from '../context/UIContext';
 function MobileMenu() {
     const { activeTab, setActiveTab, reportModalOpen, setReportModalOpen } = useUI();
   return (
-          <nav className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-20 bg-emerald-950/80 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] flex items-center justify-around px-6 z-50 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+          <nav className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-20 bg-emerald-950/80 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] flex items-center justify-around px-6 z-50 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
         {[
           { id: 'home', icon: <Home size={22} />, label: 'হোম', link: '/' },
           { id: 'complaints', icon: <Megaphone size={22} />, label: 'অভিযোগ দেখুন', link: '/complaints' },
+          { id: 'representive', icon: <Megaphone size={22} />, label: 'প্রতিনিধি', link: '/representives' },
+          { id: 'govt-offices', icon: <Building size={22} />, label: 'সরকারি দপ্তর', link: '/govt-offices' },
           { id: 'projects', icon: <Building size={22} />, label: 'উন্নয়ন', link: '/projects' },
           { id: 'profile', icon: <User size={22} />, label: 'পরিচয়', link: '/about' },
         ].map((tab) => (

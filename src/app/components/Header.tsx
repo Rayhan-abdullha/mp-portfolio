@@ -16,6 +16,8 @@ const Header = () => {
     { name: 'হোম', href: '/' },
     { name: 'পরিচয়', href: '/about' },
     { name: 'অভিযোগ দেখুন', href: '/complaints' },
+    { name: 'প্রতিনিধি', href: '/representives' },
+    { name: 'সরকারি দপ্তর', href: '/govt-offices' },
     { name: 'উন্নয়ন', href: '/projects' },
   ];
 
